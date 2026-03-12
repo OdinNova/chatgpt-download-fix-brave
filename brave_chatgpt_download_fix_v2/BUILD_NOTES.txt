@@ -1,0 +1,26 @@
+HIGH-GRADE BUILD NOTES
+
+Applied framework-grade build discipline to the Brave conversion:
+
+1. Scope lock:
+   - Converted only the browser-compatibility and delivery-path surfaces required for Brave/Chromium MV3.
+   - Preserved the original page-hook interception strategy.
+
+2. Stronger runtime structure:
+   - Service worker background for MV3.
+   - Promise wrappers around callback-style Chrome APIs.
+   - Centralized state mutation helpers.
+   - Duplicate capture suppression.
+
+3. Diagnostics:
+   - Popup now shows capture count, last file, and structured logs.
+   - Background logs direct URL readiness, start, failures, duplicates, and download changes.
+
+4. Delivery package:
+   - Unpacked Brave folder
+   - ZIP archive
+   - README with load/test steps
+
+5. Honest status:
+   - Structurally Brave-ready.
+   - Still requires live runtime test in Brave against the current ChatGPT download flow.
